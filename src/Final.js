@@ -3,7 +3,7 @@ import React from "react";
 export default function Final({ quizData, restartHandler, score }) {
   return (
     <div>
-      <h1>Final score is {score} points</h1>
+      <h1>Final score is {score} point(s)</h1>
       <p>The correct Answers for the quiz are</p>
 
       {quizData.map((item) => (
