@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./styles.css";
 import { quizData } from "./quizData";
 import Final from "./Final";
+import Options from "./Options";
 
 export class Quiz extends Component {
   constructor(props) {
@@ -106,7 +107,11 @@ export class Quiz extends Component {
       <div>
         <h2>{question}</h2>
         <span>{`Question ${currentIndex + 1} of ${quizData.length}`}</span>
-        <Options />
+        <Options
+          options={options}
+          userAnswer={userAnswer}
+          checkAnswer={this.checkAnswer}
+        />
 
         {currentIndex < quizData.length - 1 && (
           <button

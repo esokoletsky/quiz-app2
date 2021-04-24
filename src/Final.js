@@ -7,7 +7,9 @@ export default function Final({ quizData, restartHandler, score }) {
       <p>The correct Answers for the quiz are</p>
       <ul>
         {quizData.map((item) => (
-          <li key={item.id}>{item.answer}</li>
+          <li key={item.id}>
+            {item.id + 1}) {item.answer}
+          </li>
         ))}
       </ul>
       <button onClick={restartHandler}>Restart</button>
