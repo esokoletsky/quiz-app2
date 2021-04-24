@@ -127,7 +127,7 @@ export class Quiz extends Component {
             Finish
           </button>
         )}
-        {this.state.disabled ? <p>Please choose an answer</p> : ""}
+        {this.state.disabled ? <p>Please select an answer</p> : ""}
       </div>
     );
   }

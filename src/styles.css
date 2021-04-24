@@ -1,26 +1,38 @@
+body {
+  font-family: Verdana;
+  font-size: 18px;
+  background-color: white;
+}
+
 .App {
+  margin: auto;
+  max-width: 60%;
   text-align: center;
   font-family: Arial;
+  background-color: rgba(211, 211, 211, 0.173);
+  padding: 15px;
+  border-radius: 5px;
 }
 
-/* The answer selecteed by the user */
 .selected {
-  background-color: orange;
+  background-color: rgba(255, 166, 0, 0.502);
 }
 
-/* The list of options */
 .options {
+  margin: 15px auto;
+  max-width: 70%;
   padding: 8px;
   border: 2px solid #000;
   cursor: pointer;
+  border-radius: 5px;
 }
 
 ul {
   list-style-type: none;
 }
 
-body {
-  font-family: Verdana;
-  font-size: 18px;
-  background-color: #2980b9;
+button {
+  background-color: rgba(4, 160, 4, 0.221);
+  padding: 5px;
+  border-radius: 5px;
 }

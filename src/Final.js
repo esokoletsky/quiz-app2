@@ -5,13 +5,13 @@ export default function Final({ quizData, restartHandler, score }) {
     <div>
       <h1>Final score is {score} points</h1>
       <p>The correct Answers for the quiz are</p>
-      <ul>
-        {quizData.map((item) => (
-          <li key={item.id}>
-            {item.id + 1}) {item.answer}
-          </li>
-        ))}
-      </ul>
+
+      {quizData.map((item) => (
+        <p key={item.id} style={{ textAlign: "left", marginLeft: "35%" }}>
+          {item.id + 1}) {item.answer}
+        </p>
+      ))}
+
       <button onClick={restartHandler}>Restart</button>
     </div>
   );

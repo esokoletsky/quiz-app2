@@ -7,13 +7,13 @@ export const quizData = [
   },
   {
     id: 1,
-    question: `What is the correct syntax for referring to an external script called "xxx.js"?`,
+    question: `How do you call a function named "myFunction"?`,
     options: [
-      `<script name="xxx.js">`,
-      `<script href="xxx.js">`,
-      `<script src="xxx.js">`,
+      `call function myFunction()`,
+      `call myFunction()`,
+      `myFunction() `,
     ],
-    answer: `<script src="xxx.js">`,
+    answer: `myFunction()`,
   },
   {
     id: 2,
