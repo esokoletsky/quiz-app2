@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./styles.css";
 import { quizData } from "./quizData";
+import Final from "./Final";
 
 export class Quiz extends Component {
   constructor(props) {
@@ -40,6 +41,7 @@ export class Quiz extends Component {
     this.setState({
       currentIndex: this.state.currentIndex + 1,
       userAnswer: null,
+      disabled: true,
     });
   };
 
@@ -92,16 +94,11 @@ export class Quiz extends Component {
 
     if (quizEnd) {
       return (
-        <div>
-          <h1>Final score is {this.state.score} points</h1>
-          <p>The correct Answers for the quiz are</p>
-          <ul>
-            {quizData.map((item) => (
-              <li>{item.answer}</li>
-            ))}
-          </ul>
-          <button onClick={this.restartHandler}>Restart</button>
-        </div>
+        <Final
+          quizData={quizData}
+          restartHandler={this.restartHandler}
+          score={this.state.score}
+        />
       );
     }
 
@@ -109,9 +106,9 @@ export class Quiz extends Component {
       <div>
         <h2>{question}</h2>
         <span>{`Question ${currentIndex + 1} of ${quizData.length}`}</span>
-        {options.map((option) => (
+        {options.map((option, idx) => (
           <p
-            key={option.id}
+            key={idx}
             className={`options ${userAnswer === option ? "selected" : null}`}
             onClick={() => this.checkAnswer(option)}
           >
@@ -127,6 +124,7 @@ export class Quiz extends Component {
             Next Question
           </button>
         )}
+
         {currentIndex === quizData.length - 1 && (
           <button onClick={this.finishHandler} disabled={this.state.disabled}>
             Finish
