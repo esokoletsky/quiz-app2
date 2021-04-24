@@ -106,15 +106,7 @@ export class Quiz extends Component {
       <div>
         <h2>{question}</h2>
         <span>{`Question ${currentIndex + 1} of ${quizData.length}`}</span>
-        {options.map((option, idx) => (
-          <p
-            key={idx}
-            className={`options ${userAnswer === option ? "selected" : null}`}
-            onClick={() => this.checkAnswer(option)}
-          >
-            {option}
-          </p>
-        ))}
+        <Options />
 
         {currentIndex < quizData.length - 1 && (
           <button
@@ -130,6 +122,7 @@ export class Quiz extends Component {
             Finish
           </button>
         )}
+        {this.state.disabled ? <p>Please choose an answer</p> : ""}
       </div>
     );
   }
