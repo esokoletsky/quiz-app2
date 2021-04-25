@@ -17,13 +17,13 @@ export const quizData = [
   },
   {
     id: 2,
-    question: `How to write an IF statement for executing some code if "i" is NOT equal to 5?`,
+    question: `How do you write an IF statement checking if a variable "i" is NOT equal to 5?`,
     options: [`if i <> 5`, `if (i <> 5)`, `if i =! 5 then`, `if (i != 5)`],
     answer: `if (i != 5)`,
   },
   {
     id: 3,
-    question: `How can you add a comment in a JavaScript?`,
+    question: `How can you add a comment in JavaScript?`,
     options: [
       `//This is a comment`,
       `'This is a comment`,
@@ -33,7 +33,7 @@ export const quizData = [
   },
   {
     id: 4,
-    question: `How do you round the number 7.25, to the nearest integer?`,
+    question: `How do you round the number 7.25 to the nearest integer?`,
     options: [`rnd(7.25)`, `round(7.25)`, `Math.rnd(7.25)`, `Math.round(7.25)`],
     answer: `Math.round(7.25)`,
   },
