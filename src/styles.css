@@ -9,13 +9,14 @@ body {
   max-width: 50%;
   text-align: center;
   font-family: Arial;
-  background-color: rgba(211, 211, 211, 0.173);
+  background-color: rgba(211, 211, 211, 0.13);
   padding: 15px;
   border-radius: 5px;
 }
 
 .selected {
-  background-color: rgba(255, 166, 0, 0.502);
+  background-color: #f44336;
+  color: white;
 }
 
 .options {
@@ -27,12 +28,24 @@ body {
   border-radius: 5px;
 }
 
-ul {
-  list-style-type: none;
+.answers {
+  text-align: left;
+  margin-left: 35%;
 }
 
-button {
-  background-color: rgba(4, 160, 4, 0.221);
-  padding: 5px;
-  border-radius: 5px;
+/* Media Queries */
+
+@media only screen and (max-width: 800px) {
+  .App {
+    max-width: 90%;
+  }
+  .options {
+    max-width: 70%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .answers {
+    margin-left: 20%;
+  }
 }

@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "@material-ui/core/Button";
 
 const Final = ({ quizData, restartHandler, score }) => {
   return (
@@ -7,14 +8,16 @@ const Final = ({ quizData, restartHandler, score }) => {
         Final score is {score} point{score > 1 ? "s" : score === 0 ? "s" : ""}
       </h1>
       <p>The correct Answers for the quiz are</p>
-
-      {quizData.map((item) => (
-        <p key={item.id} style={{ textAlign: "left", marginLeft: "35%" }}>
-          {`${item.id + 1})  ${item.answer}`}
-        </p>
-      ))}
-
-      <button onClick={restartHandler}>Restart</button>
+      <ol>
+        {quizData.map((item) => (
+          <li className='answers' key={item.id}>
+            {item.answer}
+          </li>
+        ))}
+      </ol>
+      <Button onClick={restartHandler} variant='contained' color='primary'>
+        Restart
+      </Button>
     </div>
   );
 };
