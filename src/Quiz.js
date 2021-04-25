@@ -54,6 +54,13 @@ export class Quiz extends Component {
   };
 
   finishHandler = () => {
+    const { userAnswer, answer, score } = this.state;
+    if (userAnswer === answer) {
+      this.setState({
+        score: score + 1,
+      });
+    }
+
     if (this.state.currentIndex === quizData.length - 1) {
       this.setState({
         quizEnd: true,
@@ -102,7 +109,7 @@ export class Quiz extends Component {
         />
       );
     }
-
+    console.log(this.state.score);
     return (
       <div>
         <h2>{question}</h2>

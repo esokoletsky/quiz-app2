@@ -11,7 +11,7 @@ export const quizData = [
     options: [
       `call function myFunction()`,
       `call myFunction()`,
-      `myFunction() `,
+      `myFunction()`,
     ],
     answer: `myFunction()`,
   },
