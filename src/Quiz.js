@@ -110,7 +110,7 @@ export class Quiz extends Component {
         />
       );
     }
-    console.log(this.state.score);
+
     return (
       <div>
         <h2>{question}</h2>
