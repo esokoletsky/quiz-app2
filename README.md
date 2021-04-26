@@ -1,6 +1,6 @@
 ## Hey, I'm Eugene!
 
-JavaScript Quiz app build with React
+JavaScript Quiz app built with React. Works well on all screen sizes!
 
 ## Start the App
 
