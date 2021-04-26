@@ -15,7 +15,8 @@ body {
 }
 
 .selected {
-  background-color: #f44336;
+  /* background-color: #f44336; */
+  background-color: #757de8;
   color: white;
 }
 
@@ -31,6 +32,7 @@ body {
 .answers {
   text-align: left;
   margin-left: 35%;
+  margin-bottom: 7px;
 }
 
 /* Media Queries */
@@ -40,7 +42,7 @@ body {
     max-width: 90%;
   }
   .options {
-    max-width: 70%;
+    max-width: 60%;
   }
 }
 

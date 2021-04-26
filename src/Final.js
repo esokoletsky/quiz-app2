@@ -7,7 +7,7 @@ const Final = ({ quizData, restartHandler, score }) => {
       <h1>
         Final score is {score} point{score > 1 ? "s" : score === 0 ? "s" : ""}
       </h1>
-      <p>The correct Answers for the quiz are</p>
+      <p>The correct answers for the quiz are:</p>
       <ol>
         {quizData.map((item) => (
           <li className='answers' key={item.id}>
