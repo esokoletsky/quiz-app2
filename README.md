@@ -8,8 +8,7 @@ First clone
 
 Start with `npm install` to get and install the proper dependencies
 
-Running `npm start` will run the E-Commerce site
-
+Running `npm start` will run the app
 Visit `http://localhost:3000` to start shopping on a local server
 
 `Deployed Link`: https://quiz-app-gmg.netlify.app/
